@@ -3,6 +3,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan'); //--middleware
 
+//---Import all router
 const indexRouter = require('./routes/index');
 const colorsRouter = require('./routes/colors');
 const carsRouter = require('./routes/cars');
