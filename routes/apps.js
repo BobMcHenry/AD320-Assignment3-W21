@@ -5,17 +5,17 @@
 
 /* --------GET all apps info-------------*/
 
-    router.get('/', function(req, res) {// this router will run if no ID is specified
+    router.get('/', (req, res) => {// this router will run if no ID is specified
         res.json(dataAppsJson);
     });
 
 /* --------GET specific APP with ID------*/ 
 
-    router.get('/:id', function(req, res){
-        const found = dataAppsJson.some( dataAppsJson => dataAppsJson.id === parseInt(req.params.id)); // returns true when ID matches
+    router.get('/:id', (req, res) => {
+        const found = dataAppsJson.some( dataAppsJson => {dataAppsJson.id === parseInt(req.params.id)} ); // returns true when ID matches
 
         if(found){
-            res.json(dataAppsJson.filter(dataAppsJson => dataAppsJson.id === parseInt(req.params.id)));
+            res.json(dataAppsJson.filter( dataAppsJson => {dataAppsJson.id === parseInt(req.params.id)} ));
             // function (dataAppsJson) {
             //     dataAppsJson.id === parseInt(req.params.id)
             // }
