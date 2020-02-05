@@ -8,7 +8,7 @@ router.get('/', (req, res) => res.send(JSON.stringify(apps)));
 router.get('/:id', (req, res) => {
     var app = apps.find(app => app.id === parseInt(req.params.id));
 
-    res.send(JSON.stringify(app))
+    app ? res.send(JSON.stringify(app)) : res.status(404).send('not found');;
 });
 
 module.exports = router;
