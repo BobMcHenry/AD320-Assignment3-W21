@@ -9,7 +9,7 @@ router.get('/',(req, res)=>{
 //fetches one pet, returns as json object
 router.get('/:id',(req,res)=>{
     const pet = pets.find(
-        function(colour) { return colour.id === parseInt(req.params.id); }
+        function(petter) { return petter.id === parseInt(req.params.id); }
     );
     if (!pets) {
         res.status(404).send('No such pets found');
