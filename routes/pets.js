@@ -8,6 +8,6 @@ router.get('/', (req, res) =>
     res.json(pets));
 
 router.get('/:id', (req, res) => {
-  res.json(pets.filter(pets => pets.id ===
-  parseInt(req.params.id))); 
+  res.json(pets.find(pet => 
+    pet.id === parseInt(req.params.id))); 
 });
