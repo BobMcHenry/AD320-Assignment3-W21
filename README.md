@@ -1,12 +1,14 @@
 const express = require('express');
 const router = express.Router();
-// get all pets, returns as json array
+//get all pets, returns as json array  with the pets
+
+
 const pets = require('../data/pets.json');
 
 router.get('/',(req, res)=>{
     res.json(pets);
 });
-//fetches one pet, returns as json object
+// get one pet, returns as json object for the pets
 router.get('/:id',(req,res)=>{
     const pet = pets.find(
         function(petter) { return petter.id === parseInt(req.params.id); }
@@ -16,4 +18,6 @@ router.get('/:id',(req,res)=>{
     }
     res.json(pets);
 });
+
 module.exports = router;
+// end the assignment
