@@ -15,7 +15,7 @@ router.get('/:id',(req,res)=>{
     );
     if (!pets) {
         res.status(404).send('No such pets found');
-    }
+  }
     res.json(pets);
 });
 
