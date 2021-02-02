@@ -24,7 +24,7 @@ router.get('/:ID', function(req, res, next){
         }
     }
 
-    res.send(output);
+    res.json(output);
 
 });
 
